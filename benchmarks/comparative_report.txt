@@ -1,0 +1,55 @@
+
+======================================================================
+CODE COMMENT GENERATION — COMPARATIVE BENCHMARKING REPORT
+======================================================================
+
+PROJECT DETAILS
+----------------------------------------------------------------------
+Base Model:             google/gemma-3-270m-it
+Fine-Tuned Model:       google/gemma-3-270m-it + LoRA
+Test Set Size:          50 examples (same random seed)
+
+PERFORMANCE METRICS
+----------------------------------------------------------------------
+
+BLEU-4:
+  Baseline    0.006376
+  Fine-Tuned  0.112378
+  Change      +1662.5%
+
+ROUGE-L:
+  Baseline    0.131574
+  Fine-Tuned  0.332951
+  Change      +153.1%
+
+Generation Speed (avg per example):
+  Baseline    3.416s
+  Fine-Tuned  1.179s
+  Change      -65.5%
+
+INTERPRETATION
+----------------------------------------------------------------------
+
+BLEU: ✓ improved by 1662.5%
+  Measures n-gram overlap with reference docstrings.
+
+ROUGE-L: ✓ improved by 153.1%
+  Measures longest common subsequence recall against reference.
+
+EXAMPLE OUTPUTS (first example)
+----------------------------------------------------------------------
+
+Baseline:
+  Reference  : What keys we want pressed.
+  Prediction : """
+	//io = socket(process.env.PORT || process.env.NODE_PORT || 3333);
+	//io = socket(http);
+	//io.o
+  BLEU-4     : 0.0038   ROUGE-L: 0.0000
+
+Fine-Tuned:
+  Reference  : What keys we want pressed.
+  Prediction : Start a new game.
+
+@return void
+  BLEU-4     : 0.0278   ROUGE-L: 0.0000

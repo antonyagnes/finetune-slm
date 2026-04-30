@@ -1,0 +1,13 @@
+{
+  "model": "google/gemma-3-270m-it",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "train_samples": 500,
+  "eval_samples": 100,
+  "epochs": 3,
+  "batch_size": 2,
+  "grad_accum": 4,
+  "learning_rate": 0.0005,
+  "training_time_min": 133.7,
+  "final_loss": 2.750354120971034
+}

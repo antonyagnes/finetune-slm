@@ -1,0 +1,45 @@
+{
+  "model": "google/gemma-3-270m-it",
+  "num_examples": 50,
+  "avg_bleu_4": 0.006376065135983039,
+  "avg_rouge_l": 0.13157368029648076,
+  "avg_generation_time_sec": 3.4159668922424316,
+  "total_time_sec": 170.79834461212158,
+  "examples": [
+    {
+      "code": "function() {\n\t\t    //io = socket(process.env.PORT || process.env.NODE_PORT || 3333);\n        io = socket(http);\n\n\t\t    io.on('connection', function(socket){\n            console.log('connection happene",
+      "reference": "What keys we want pressed.",
+      "prediction": "\"\"\"\n\t//io = socket(process.env.PORT || process.env.NODE_PORT || 3333);\n\t//io = socket(http);\n\t//io.on('connection', function(socket){\n\t//    console.log('connection happened');\n\t//    //Logic for handeling a new connection here.",
+      "bleu_4": 0.0038253628844009133,
+      "rouge_l": 0.0
+    },
+    {
+      "code": "func (s *BatchScheduleActionDeleteRequest) SetActionNames(v []*string) *BatchScheduleActionDeleteRequest {\n\ts.ActionNames = v\n\treturn s\n}",
+      "reference": "// SetActionNames sets the ActionNames field's value.",
+      "prediction": "The function `SetActionNames` takes a slice of `*string` objects representing the actions to be deleted from the batch schedule. It returns a `BatchScheduleActionDeleteRequest` object.\nThe function is called with a batch schedule action delete request.\nThe function returns the `BatchScheduleActionDeleteRequest` object.\nThe function is called with a batch schedule action delete request.",
+      "bleu_4": 0.003628990737912465,
+      "rouge_l": 0.06779661016949154
+    },
+    {
+      "code": "func (s *Service) Close() error {\n\tif s.rootsWatch != nil {\n\t\ts.rootsWatch.Stop()\n\t}\n\tif s.leafWatch != nil {\n\t\ts.leafWatch.Stop()\n\t}\n\treturn nil\n}",
+      "reference": "// Close stops the service and frees resources.",
+      "prediction": "```python\nimport time\nimport os\n\ndef close_service(service_name):\n    \"\"\"\n    Closes a service based on its root/leaf watch status.\n\n    Args:\n        service_name: The name of the service to close.\n\n    Returns:\n        The name of the service to close, or an error if the service is not closed.",
+      "bleu_4": 0.00791683523302066,
+      "rouge_l": 0.1111111111111111
+    },
+    {
+      "code": "function(str) {\n      if (typeof str !== 'string') {\n        str = this.content;\n      }\n      if (typeof str !== 'string') return '';\n      str = str.replace(/(<([^>]+)>)/g, '');\n      return str.tri",
+      "reference": "Strip HTML from the given `str` or `view.content`\n\n@param  {String} str HTML string\n@return {String}",
+      "prediction": "\"\"\"\nThis function takes a string as input and returns a new string that is the concatenation of all the characters in the string.\n\"\"\"\n```\n```\nDocstring:\n\"\"\"\nThis function takes a string as input and returns a new string that is the concatenation of all the characters in the string.\n\"\"\"\n```\n```\nDocstring:\n\"\"\"\nThis function takes",
+      "bleu_4": 0.0040148113002938125,
+      "rouge_l": 0.14925373134328357
+    },
+    {
+      "code": "def is_build_linked(source, pkg):\n        \n        for line in source.split(\"\\n\"):\n            if re.search(r\"(api|compile)\\s+project\\(['\\\"]:{}['\\\"]\\)\".format(pkg),\n                         line):\n   ",
+      "reference": "Returns true if the \"compile project(':<project>')\"\n            line exists exists in the file",
+      "prediction": "def is_build_linked(source, pkg):\n        \n        for line in source.split(\"\\n\"):\n            if re.search(r\"(api|compile)\\s+project\\(['\\\"]:{}['\\\"]\\)\".format(pkg),\n                         line):\n                return True\n        return False\n```\n```\ndef is_build_linked(source,",
+      "bleu_4": 0.008907530052738092,
+      "rouge_l": 0.17777777777777778
+    }
+  ]
+}

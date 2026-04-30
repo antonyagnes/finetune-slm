@@ -1,0 +1,46 @@
+{
+  "model": "google/gemma-3-270m-it + LoRA",
+  "adapter_dir": "/Users/agnespriyadharshini/git/finetune-slm/models/lora_adapter",
+  "num_examples": 50,
+  "avg_bleu_4": 0.1123780875629552,
+  "avg_rouge_l": 0.3329513894237215,
+  "avg_generation_time_sec": 1.1793369626998902,
+  "total_time_sec": 58.96684813499451,
+  "examples": [
+    {
+      "code": "function() {\n\t\t    //io = socket(process.env.PORT || process.env.NODE_PORT || 3333);\n        io = socket(http);\n\n\t\t    io.on('connection', function(socket){\n            console.log('connection happene",
+      "reference": "What keys we want pressed.",
+      "prediction": "Start a new game.\n\n@return void",
+      "bleu_4": 0.02777619034011792,
+      "rouge_l": 0.0
+    },
+    {
+      "code": "func (s *BatchScheduleActionDeleteRequest) SetActionNames(v []*string) *BatchScheduleActionDeleteRequest {\n\ts.ActionNames = v\n\treturn s\n}",
+      "reference": "// SetActionNames sets the ActionNames field's value.",
+      "prediction": "// SetActionNames sets the ActionNames field of the BatchScheduleActionDeleteRequest.",
+      "bleu_4": 0.537284965911771,
+      "rouge_l": 0.6666666666666666
+    },
+    {
+      "code": "func (s *Service) Close() error {\n\tif s.rootsWatch != nil {\n\t\ts.rootsWatch.Stop()\n\t}\n\tif s.leafWatch != nil {\n\t\ts.leafWatch.Stop()\n\t}\n\treturn nil\n}",
+      "reference": "// Close stops the service and frees resources.",
+      "prediction": "// Close closes all the watchers of the service.",
+      "bleu_4": 0.06674094719041482,
+      "rouge_l": 0.39999999999999997
+    },
+    {
+      "code": "function(str) {\n      if (typeof str !== 'string') {\n        str = this.content;\n      }\n      if (typeof str !== 'string') return '';\n      str = str.replace(/(<([^>]+)>)/g, '');\n      return str.tri",
+      "reference": "Strip HTML from the given `str` or `view.content`\n\n@param  {String} str HTML string\n@return {String}",
+      "prediction": "Returns the string to be parsed.\n\n@param str The string to parse.\n\n@return The parsed string.",
+      "bleu_4": 0.02765518185853167,
+      "rouge_l": 0.375
+    },
+    {
+      "code": "def is_build_linked(source, pkg):\n        \n        for line in source.split(\"\\n\"):\n            if re.search(r\"(api|compile)\\s+project\\(['\\\"]:{}['\\\"]\\)\".format(pkg),\n                         line):\n   ",
+      "reference": "Returns true if the \"compile project(':<project>')\"\n            line exists exists in the file",
+      "prediction": "Check if a source is a built-in project.",
+      "bleu_4": 0.006726634038039702,
+      "rouge_l": 0.18181818181818185
+    }
+  ]
+}
