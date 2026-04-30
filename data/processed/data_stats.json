@@ -1,0 +1,10 @@
+{
+  "source_file": "train-00000-of-00003.parquet",
+  "rows_before_clean": 458356,
+  "rows_after_clean": 447846,
+  "train_rows": 313492,
+  "eval_rows": 67176,
+  "test_rows": 67178,
+  "avg_code_words_train": 48.7,
+  "avg_comment_words_train": 15.1
+}
