@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "finetune-slm"
+version = "0.1.0"
+description = "Fine-tune Gemma 3 270M for code comment generation on M1 MacBook"
+authors = []
+readme = "README.md"
+packages = []
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+# Core ML
+torch = ">=2.2.0"
+torchvision = ">=0.17.0"
+torchaudio = ">=2.2.0"
+transformers = ">=4.40.0"
+peft = ">=0.10.0"
+datasets = ">=2.18.0"
+accelerate = ">=0.27.0"
+
+# Data
+pandas = ">=2.1.0"
+pyarrow = ">=14.0.0"
+scikit-learn = ">=1.4.0"
+numpy = ">=1.26.0"
+
+# Evaluation
+rouge-score = ">=0.1.2"
+nltk = ">=3.8.0"
+
+# Utilities
+tqdm = ">=4.66.0"
+matplotlib = ">=3.8.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = ">=6.0.0"
+jupyterlab = ">=4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
